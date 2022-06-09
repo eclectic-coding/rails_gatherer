@@ -2,6 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Task, type: :model do
 
+  it_should_behave_like "sizeable"
+
   describe "initialization" do
     let(:task) { Task.new }
 
