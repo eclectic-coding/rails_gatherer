@@ -1,4 +1,6 @@
 class Project < ApplicationRecord
+  include Sizeable
+
   has_many :tasks, dependent: :destroy
 
   validates_presence_of :name
@@ -15,7 +17,7 @@ class Project < ApplicationRecord
     incomplete_tasks.empty?
   end
 
-  def total_size
+  def size
     tasks.sum(&:size)
   end
 

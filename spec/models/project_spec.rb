@@ -2,6 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Project, type: :model do
 
+  it_should_behave_like "sizeable"
+
   describe "completion" do
     let(:project) { Project.new }
     let(:task) { Task.new }
@@ -41,7 +43,7 @@ RSpec.describe Project, type: :model do
     end
 
     it "can calculate total size" do
-      expect(project.total_size).to eq(10)
+      expect(project.size).to eq(10)
     end
 
     it "can calculate remaining size" do
