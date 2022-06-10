@@ -22,6 +22,9 @@ end
 
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'fuubar'
+  gem 'guard'
+  gem 'guard-rspec'
   gem 'rubocop'
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec'
