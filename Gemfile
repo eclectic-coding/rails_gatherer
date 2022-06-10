@@ -21,10 +21,10 @@ group :development, :test do
 end
 
 group :development do
-  gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'fuubar'
   gem 'guard'
   gem 'guard-rspec'
+  gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'rubocop'
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec'
@@ -37,6 +37,7 @@ group :test do
   gem 'capybara', '>= 2.15'
   gem 'chromedriver-helper'
   gem 'selenium-webdriver'
+  gem 'simplecov'
 end
 
 # gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
