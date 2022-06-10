@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 class Project < ApplicationRecord
   include Sizeable
 
   has_many :tasks, dependent: :destroy
 
-  validates_presence_of :name
+  validates :name, presence: true
 
   def self.velocity_length_in_days
     21
@@ -39,6 +41,7 @@ class Project < ApplicationRecord
 
   def on_schedule?
     return false if projected_days_remaining.nan?
+
     (Time.zone.today + projected_days_remaining) <= due_date
   end
 end

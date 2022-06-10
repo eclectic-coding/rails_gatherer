@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec::Matchers.define :be_of_size do |expected|
   match do |actual|
     size_to_check = @incomplete ? actual.remaining_size : actual.size
