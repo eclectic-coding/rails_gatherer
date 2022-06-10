@@ -184,6 +184,61 @@
           null
         ]
       },
+      "/Users/chucksmith/code/gatherer/spec/factories/projects.rb": {
+        "lines": [
+          1,
+          1,
+          12,
+          12,
+          null,
+          null
+        ]
+      },
+      "/Users/chucksmith/code/gatherer/spec/factories/tasks.rb": {
+        "lines": [
+          1,
+          1,
+          31,
+          10,
+          17,
+          null,
+          1,
+          15,
+          null,
+          null,
+          1,
+          8,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          8,
+          null,
+          null,
+          1,
+          8,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/chucksmith/code/gatherer/config/routes.rb": {
         "lines": [
           1,
@@ -217,30 +272,37 @@
           null
         ]
       },
+      "/Users/chucksmith/code/gatherer/spec/support/factory_bot.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
       "/Users/chucksmith/code/gatherer/spec/support/size_matcher.rb": {
         "lines": [
           null,
           null,
           1,
-          2,
-          2,
-          2,
+          3,
+          3,
+          3,
           null,
           null,
-          2,
+          3,
           0,
           null,
           null,
-          2,
+          3,
           0,
           null,
           null,
-          2,
+          3,
           0,
           null,
           null,
-          2,
-          0,
+          3,
+          1,
           null,
           null
         ]
@@ -664,6 +726,6 @@
         ]
       }
     },
-    "timestamp": 1654892089
+    "timestamp": 1654895328
   }
 }

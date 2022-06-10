@@ -18,6 +18,7 @@ gem 'uglifier', '>= 1.3.0'
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails', '~> 3.7.0'
+  gem 'factory_bot_rails'
 end
 
 group :development do
@@ -35,9 +36,9 @@ end
 
 group :test do
   gem 'capybara', '>= 2.15'
-  gem 'chromedriver-helper'
   gem 'selenium-webdriver'
   gem 'simplecov'
+  gem 'webdriver'
 end
 
 # gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
