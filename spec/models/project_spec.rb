@@ -77,4 +77,32 @@ RSpec.describe Project do
     end
   end
 
+  describe 'stubs' do
+    it 'stubs an object' do
+      project = described_class.new(name: 'Project Greenlight')
+      allow(project).to receive(:name)
+      expect(project.name).to be_nil
+    end
+
+    it 'stubs an object again' do
+      project = described_class.new(name: 'Project Greenlight')
+      allow(project).to receive(:name).and_return('Fred')
+      expect(project.name).to eq('Fred')
+    end
+
+    it 'stubs a class' do
+      allow(described_class).to receive(:find).and_return(
+        described_class.new(name: 'Project Greenlight')
+      )
+      project = described_class.find(1) # Avoid stubbing find (p.136)
+      expect(project.name).to eq('Project Greenlight')
+    end
+
+    it 'mocks an object' do
+      mock_project = described_class.new(name: 'Project Greenlight')
+      allow(mock_project).to receive(:name).and_return('Fred')
+      expect(mock_project.name).to eq('Fred')
+    end
+  end
+
 end
