@@ -44,4 +44,9 @@ class Project < ApplicationRecord
 
     (Time.zone.today + projected_days_remaining) <= due_date
   end
+
+  def next_task_order
+    return 1 if tasks.empty?
+    (tasks.last.project_order || tasks.size) + 1
+  end
 end

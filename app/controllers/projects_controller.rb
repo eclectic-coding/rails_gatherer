@@ -1,8 +1,13 @@
 # frozen_string_literal: true
 
 class ProjectsController < ApplicationController
+  before_action :find_project, only: :show
+  
   def index
     @projects = Project.all
+  end
+
+  def show
   end
 
   def new
@@ -21,5 +26,11 @@ class ProjectsController < ApplicationController
       @project = @workflow.project
       render :new
     end
+  end
+  
+  private 
+  
+  def find_project
+    @project = Project.find(params[:id])
   end
 end

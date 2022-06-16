@@ -37,7 +37,6 @@ RSpec.describe Project do
 
   end
 
-
   describe 'estimates' do
     let(:project) { build_stubbed(:project, tasks: [newly_done, old_done, small_not_done, large_not_done]) }
     let(:newly_done) { build_stubbed(:task, :newly_complete) }
@@ -74,6 +73,14 @@ RSpec.describe Project do
     it 'knows if it is on schedule' do
       project.due_date = 6.months.from_now
       expect(project).to be_on_schedule
+    end
+  end
+
+  describe 'task order' do
+    let(:project) { create(:project, name: 'Project') }
+
+    it "makes 1 the order of the first task in an entry project" do
+      expect(project.next_task_order).to eq(1)
     end
   end
 
