@@ -10,19 +10,15 @@
 
   <tbody>
     <% @project.tasks.each do |task| %>
-    <tr id="task_<%= task.project_order %>">
-      <td class="name"><%= task.title %></td>
-      <td class="size"><%= task.size %></td>
-      <td class="completed"><%= task.completed_at %></td>
-      <td>
-        <% unless task.first_in_project? %>
-          <%= link_to "Up", up_task_path(task.id), method: :patch %>
-        <% end %>
-        <% unless task.last_in_project? %>
-          <%= link_to "Down", down_task_path(task.id), method: :patch %>
-        <% end %>
-      </td>
-    </tr>
+      <tr id="task_<%= task.project_order %>">
+        <td class="name"><%= task.title %></td>
+        <td class="size"><%= task.size %></td>
+        <td class="completed"><%= task.completed_at %></td>
+        <td>
+          <button class="up-button">Up</button>
+          <button class="down-button">Down</button>
+        </td>
+      </tr>
 
     <% end %>
   </tbody>
@@ -35,6 +31,6 @@
   <%= f.label :title, 'Task' %>
   <%= f.text_field :title %>
   <%= f.label :size %>
-  <%= f.select :size, [1,2,3,4,5] %>
+  <%= f.select :size, [1, 2, 3, 4, 5] %>
   <%= f.submit 'Add Task' %>
 <% end %>
